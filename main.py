@@ -6,10 +6,15 @@ from Runners.Parser import Parser
 
 
 def main():
+    print("*-------------------*")
+    print('© 2024 Ярков Тимофей КБ-5.')
+    print('Пример запуска: python main.py -i tests -o out.')
+    print("*-------------------*\n")
     parser = argparse.ArgumentParser(
         add_help=False,
-        description="Принимает Zp, ss, nss. Пример запуска: python main.py -i tests -o out",
+        description="Принимает Zp, ss, nss."
     )
+
     parser.add_argument('-v', '--version',
                         action='version',
                         version='elliptic curve calc 1.0',
