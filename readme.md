@@ -1,4 +1,4 @@
-# Elliptic Curve
+# Elliptic Curve Calculator
 
 Калькулятор точек на эллиптической кривой
 Позволяет провести две опреации
