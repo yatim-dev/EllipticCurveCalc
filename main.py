@@ -1,13 +1,14 @@
 import argparse
 import os
+from pydoc import describe
+
 from Runners.Parser import Parser
 
 
 def main():
     parser = argparse.ArgumentParser(
         add_help=False,
-        description=
-        "принимает Zp, ss, nss"
+        description="Принимает Zp, ss, nss. Пример запуска: python main.py -i tests -o out",
     )
     parser.add_argument('-v', '--version',
                         action='version',
