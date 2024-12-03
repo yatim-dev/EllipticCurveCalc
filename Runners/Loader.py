@@ -34,7 +34,10 @@ class Loader:
     def create_task(line: str, constructor):
         if line.startswith('a'):
             return Loader._parse_add(line, constructor)
-        return Loader._parse_mul(line, constructor)
+        elif line.startswith('m'):
+            return Loader._parse_mul(line, constructor)
+        else:
+            return print(f"Неизвестный тип операции: {line}")
 
     def calculate(self, curve: Curve):
         if self._operation:

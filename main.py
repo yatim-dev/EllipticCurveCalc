@@ -4,7 +4,21 @@ from Runners.Parser import Parser
 
 
 def main():
-    parser = argparse.ArgumentParser(description="принимает Zp, nss, ss")
+    parser = argparse.ArgumentParser(
+        add_help=False,
+        description=
+        "принимает Zp, ss, nss"
+    )
+    parser.add_argument('-v', '--version',
+                        action='version',
+                        version='elliptic curve calc 1.0',
+                        help="Показать номер версии программы и выйти."
+                        )
+    parser.add_argument('-h', '--help',
+                        action='help',
+                        default=argparse.SUPPRESS,
+                        help='Показать это справочное сообщение и выйти.'
+                        )
     parser.add_argument('-i',
                         dest='path_input',
                         nargs='?',
