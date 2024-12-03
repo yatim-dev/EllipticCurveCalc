@@ -39,7 +39,7 @@ class Polynomial:
     @staticmethod
     def get_irreducible(n: int) -> 'Polynomial':
         if n not in Polynomial._irreducible:
-            raise ValueError(f"Irreducible polynomial for degree {n} not found.")
+            raise ValueError(f"Неприводимый многочлен для степени {n} не найден.")
         return Polynomial.parse_polynomial(Polynomial._irreducible[n])
 
     @staticmethod
@@ -104,5 +104,5 @@ class Polynomial:
             old_r, r = r, old_r + quotient * r
             old_t, t = t, old_t + quotient * t
         if old_r._bits != 1:
-            raise ArithmeticError("No inverse exists.")
+            raise ArithmeticError("Обратного не существует.")
         return old_t % p
